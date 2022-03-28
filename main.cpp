@@ -23,14 +23,12 @@ int main () {
     vector <int> y;
 
     // Take in chart data
-    cout << "Enter x [end data set with -999]:";
     for (int i = 1; i <= 70; i++) {
-        string tmp;
+        int tmp;
         cin >> tmp;
-        x.push_back(tmp);
-    }
-    for (int i = 1; i <= 70; i++) {
-        y.push_back(i);
+        y.push_back(tmp);
+        x.push_back(to_string(i));
+        steps++;
     }
 
     // Print out data
