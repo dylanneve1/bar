@@ -64,11 +64,16 @@ void _print_bar_graph (int steps, vector <string> x, vector <int> y) {
     int place = _get_max (y, steps);
     bool stop = false;
     while (!stop) {
+        if (place <= 9) {
+            cout << " " << place << "  | ";
+        } else {
+            cout << place << "  | ";
+        }
         for (int i = 0; i < steps; i++) {
             if (y[i] >= place) {
-                cout << "O" << " ";
+                cout << "*";
             } else {
-                cout << " " << " ";
+                cout << " ";
             }
         }
         cout << endl;
@@ -77,10 +82,23 @@ void _print_bar_graph (int steps, vector <string> x, vector <int> y) {
             stop = true;
         }
     }
-    for (int i = 0; i < steps; i++) {
-        cout << x[i] << " ";
+    cout << "----|";
+    string border = "----+----|";
+    if (steps <= 10) {
+        cout << border << endl;
+    } else if (steps <= 20) {
+        cout << border << border << endl;
+    } else if (steps <= 30) {
+        cout << border << border << border << endl;
+    } else if (steps <= 40) {
+        cout << border << border << border << border << endl;
+    } else if (steps <= 50) {
+        cout << border << border << border << border << border << endl;
+    } else if (steps <= 60) {
+        cout << border << border << border << border << border << border << endl;
+    } else if (steps <= 70) {
+        cout << border << border << border << border << border << border << border << endl;
     }
-    cout << endl;
 }
 
 // Get largest Y value
