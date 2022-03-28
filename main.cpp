@@ -15,7 +15,6 @@ int _get_max (vector <int> y, int steps);
 // Main
 int main () {
     // Variables
-    bool stop = false;
     int steps = 0;
     int maxlength = 0;
 
@@ -23,35 +22,15 @@ int main () {
     vector <string> x;
     vector <int> y;
 
-    // Take in chart catagories
+    // Take in chart data
     cout << "Enter x [end data set with -999]:";
-    while (!stop) {
+    for (int i = 1; i <= 70; i++) {
         string tmp;
         cin >> tmp;
-        if (tmp != "-999") {
-            x.push_back (tmp);
-            steps++;
-            if (tmp.length() > maxlength) {
-                maxlength = tmp.length();
-            }
-        } else {
-            stop = true;
-        }
+        x.push_back(tmp);
     }
-
-    // Reset our bool
-    stop = false;
-
-    // Take in chart values
-    cout << "Enter y [end data set with -999]:";
-    while (!stop) {
-        int tmp;
-        cin >> tmp;
-        if (tmp != -999) {
-            y.push_back (tmp);
-        } else {
-            stop = true;
-        }
+    for (int i = 1; i <= 70; i++) {
+        y.push_back(i);
     }
 
     // Print out data
