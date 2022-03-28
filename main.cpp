@@ -65,9 +65,9 @@ void _print_bar_graph (int steps, vector <string> x, vector <int> y) {
     bool stop = false;
     while (!stop) {
         if (place <= 9) {
-            cout << " " << place << "  | ";
+            cout << " " << place << "  |";
         } else {
-            cout << place << "  | ";
+            cout << place << "  |";
         }
         for (int i = 0; i < steps; i++) {
             if (y[i] >= place) {
